@@ -39,9 +39,24 @@ def ejercicio1():
     return render_template("ejercicio1.html")
 
 
-@app.route("/ejercicio2")
+
+@app.route("/ejercicio2", methods=["GET", "POST"])
 def ejercicio2():
-    return "Ejercicio 2: Inicio de sesión"
+    if request.method == "POST":
+        usuario = request.form["usuario"]
+        contrasena = request.form["contrasena"]
+
+        if usuario == "juan" and contrasena == "admin":
+            mensaje = "Bienvenido administrador juan"
+        elif usuario == "pepe" and contrasena == "user":
+            mensaje = "Bienvenido usuario pepe"
+        else:
+            mensaje = "Usuario o contraseña incorrectos"
+
+        return render_template("ejercicio2.html", mensaje=mensaje)
+
+    return render_template("ejercicio2.html")
+
 
 
 if __name__ == "__main__":

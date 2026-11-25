@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block titulo %}Inicio de sesión{% endblock %}
+
+{% block contenido %}
+
+<div class="contenedor">
+    <h1>Inicio de sesión</h1>
+
+    <form action="{{ url_for('ejercicio2') }}" method="POST">
+
+        <label for="usuario">Ingresa tu usuario:</label>
+        <input type="text" id="usuario" name="usuario" required>
+
+        <label for="contrasena">Ingresa tu contraseña:</label>
+        <input type="password" id="contrasena" name="contrasena" required>
+
+        <button type="submit" class="boton-calcular">
+            Ingresar
+        </button>
+
+    </form>
+
+    {% if mensaje is defined %}
+        <div class="resultado">
+            <p><strong>{{ mensaje }}</strong></p>
+        </div>
+    {% endif %}
+
+    <a href="{{ url_for('inicio') }}">Volver al menú principal</a>
+</div>
+
+{% endblock %}

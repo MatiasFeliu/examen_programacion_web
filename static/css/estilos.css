@@ -100,7 +100,8 @@ form .boton {
 
 .resultado {
     text-align: left;
-    margin-top: 20px;
+    margin-top: 5px;
+    margin-bottom: 25px;
 }
 
 .resultado p {
