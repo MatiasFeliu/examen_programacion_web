@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block titulo %}Menú Principal{% endblock %}
+
+{% block contenido %}
+
+<div class="contenedor">
+    <h1>Menú Principal</h1>
+
+    <p>Seleccione el ejercicio que desea realizar:</p>
+
+    <div class="opciones">
+        <a href="{{ url_for('ejercicio1') }}" class="boton boton-morado">
+            Ejercicio 1: Compra de pinturas
+        </a>
+
+        <a href="{{ url_for('ejercicio2') }}" class="boton boton-verde">
+            Ejercicio 2: Inicio de sesión
+        </a>
+    </div>
+</div>
+
+{% endblock %}
