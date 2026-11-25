@@ -55,3 +55,54 @@ p {
 .boton:hover {
     opacity: 0.85;
 }
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-align: left;
+}
+
+form label {
+    display: block;
+    margin-top: 10px;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+form .boton {
+    width: 120px;
+    height: auto;
+    padding: 12px;
+    margin: 15px auto;
+    cursor: pointer;
+}
+
+
+.boton-calcular {
+    width: 120px;
+    padding: 12px;
+    margin: 15px auto;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.boton-calcular:hover {
+    background-color: #0056b3;
+}
+
+.resultado {
+    text-align: left;
+    margin-top: 20px;
+}
+
+.resultado p {
+    margin: 12px 0;
+}
